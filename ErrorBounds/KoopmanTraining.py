@@ -12,10 +12,10 @@ Psi_list = empty((Samples,NKoopman))
 for i in range (Samples):
 
     # Sample states
-    th0 = uniform(-2*pi, 2*pi)
-    dth0 = uniform(-5, 5)
+    th0 = uniform(-pi, pi)
+    dth0 = uniform(-2, 2)
     s0 = [th0, dth0]
-    u10 = uniform(-5, 5)
+    u10 = uniform(-1, 1)
 
     # Simulate system forward
     sn = odeint(single_pendulum, s0, [0, ts], args=(u10,))
